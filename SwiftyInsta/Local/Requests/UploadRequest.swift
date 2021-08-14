@@ -130,6 +130,11 @@ public extension User {
         enum CodingKeys: String, CodingKey {
             case adding = "in", removing = "removed"
         }
+        
+        public init(adding: [Tag], removing: [Int]) {
+            self.adding = adding
+            self.removing = removing
+        }
 
         /// `Tag`s in the picture.
         public let adding: [Tag]
